@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+    <title>Periodic Table Information Finder</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef2f7;
+            padding: 30px;
+        }
+
+        .container {
+            background-color: white;
+            max-width: 450px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #243b53;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 12px;
+            background-color: #243b53;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 12px;
+            background-color: #eef2f7;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Periodic Table Information Finder</h1>
+
+        <p>Enter a non-metal element symbol to find its information.</p>
+
+        <!-- Element Symbol Input -->
+        <label for="elementSymbol">Element Symbol:</label>
+        <input type="text" id="elementSymbol" placeholder="Example: O, H, C">
+
+        <!-- Search Button -->
+        <button type="button" py-click="search_element">Search</button>
+
+        <!-- Displays the Result -->
+        <div id="result">
+            Element information will appear here.
+        </div>
+
+    </div>
+
+    <!-- Connects the Python File -->
+    <script type="py" src="main.py"></script>
+
+</body>
+</html>
